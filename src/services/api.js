@@ -3,7 +3,7 @@ import axios from "axios";
 
 // const API_BASE_URL = "http://localhost:8090/api"; //local url
 
-const API_BASE_URL = "https://secure-fintech-bank-backend-1.onrender.com/api";//prod url
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api'; //prod url
 
 
 // Create axios instance
@@ -13,8 +13,6 @@ const api = axios.create({
         'Content-Type': 'application/json'
     },
 });
-
-console.log('API Base URL:', API_BASE_URL);
 
 // Add token to requests if available
 api.interceptors.request.use(
