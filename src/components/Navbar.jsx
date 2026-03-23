@@ -100,11 +100,13 @@ function Navbar() {
                     ) : (
                         <>
                             <li className="navbar-item">
-                                <Link to="/login" className="navbar-link">Login</Link>
+                                <Link to="/login" className="navbar-link" onClick={toggleMenu}>
+                                    Login
+                                </Link>
                             </li>
 
                             <li className="navbar-item">
-                                <Link to="/register" className="navbar-link">Register</Link>
+                                <Link to="/register" className="navbar-link" onClick={toggleMenu}>Register</Link>
                             </li>
                         </>
                     )}
